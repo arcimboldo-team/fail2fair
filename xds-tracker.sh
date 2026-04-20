@@ -7,6 +7,7 @@ if [ -z "$SEARCH_PATH" ]; then
 fi
 
 RERUN_XDS=0
+FILTER_ACCEPT_PATTERN="*"
 XDSINP_PATTERN="XDS.INP"
 IDXREF_PATTERN="IDXREF.LP"
 CORRECT_PATTERN="CORRECT.LP"
@@ -18,7 +19,7 @@ FIRST_ENTRY=1
 
 echo "Looking for XDS files within path: $SEARCH_PATH"
 
-find "$SEARCH_PATH" -type f -iname "*.lp" -exec dirname {} \; 2>/dev/null | sort -u | while read -r folder; do
+find "$SEARCH_PATH" -path "*/$FILTER_ACCEPT_PATTERN/*" -type f -iname "*.lp" -exec dirname {} \; 2>/dev/null | sort -u | while read -r folder; do
     echo "--------------------------------------------------------"
     echo "XDS run found in: $folder"
 
