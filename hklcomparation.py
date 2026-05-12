@@ -377,10 +377,3 @@ def parse_args():
 if __name__ == "__main__":
     lattice1_path, lattice2_path = parse_args()
     compare_lattices(lattice1_path, lattice2_path)
-
-
-# Brief section with documentation so as not to lose it
-# XDSWIKI https://xds.mr.mpg.de/html_doc/xds_files.html
-# Non-merohedral twinning: from minerals to proteins https://journals.iucr.org/d/issues/2019/12/00/rr5182/index.html
-# A reference-based multi-lattice indexing method integrating prior information correction and iterative refinement in protein crystallography https://pubmed.ncbi.nlm.nih.gov/34196290/
-#
