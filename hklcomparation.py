@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+# Compare two XDS HKL files to identify overlapping reflections based on detector and image distances.
 
 import argparse
 import csv
